@@ -35,15 +35,16 @@ function Dashboard() {
   const [accessLogs, setAccessLogs] = useState<Record<string, LogData>>({});
   const [selectedLink, setSelectedLink] = useState<number>(0);
 
-  useEffect(() => {
-    getInitialData();
-  }, []);
 
   const getInitialData = async () => {
     setIsLoading(true);
     await Promise.all([getData(), getLogs()]);
     setIsLoading(false);
   };
+
+  useEffect(() => {
+    getInitialData();
+  }, []);
 
   const getData = async () => {
     const shorten = await getShortenLink();
