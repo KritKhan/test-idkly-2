@@ -110,7 +110,7 @@ function Dashboard() {
         },
       ],
     };
-  }, [selectedLink, isLoading, accessLogs, shortenDatas]);
+  }, [selectedLink, accessLogs, shortenDatas]);
 
   if (isLoading) {
     return (
