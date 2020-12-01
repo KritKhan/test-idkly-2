@@ -29,6 +29,18 @@ interface LogData {
   access: number[];
 }
 
+const chartOptions = {
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+      },
+    ],
+  },
+};
+
 function Dashboard() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [shortenDatas, setShortenDatas] = useState<Array<ShortenData>>([]);
@@ -132,7 +144,7 @@ function Dashboard() {
       {shortenDatas.length > 0 ? (
         <>
           <div className="dashboard">
-            <Line height={75} data={chartData} />
+            <Line height={75} data={chartData} options={chartOptions} />
           </div>
           <Container fluid>
             <Row>
