@@ -43,7 +43,7 @@ function Dashboard() {
 
   useEffect(() => {
     getInitialData();
-  }, [getInitialData]);
+  });
 
   const getData = async () => {
     const shorten = await getShortenLink();
@@ -110,7 +110,7 @@ function Dashboard() {
         },
       ],
     };
-  }, [selectedLink, isLoading, accessLogs, shortenDatas]);
+  }, [selectedLink, accessLogs, shortenDatas]);
 
   if (isLoading) {
     return (
