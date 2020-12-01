@@ -43,7 +43,7 @@ function Dashboard() {
 
   useEffect(() => {
     getInitialData();
-  },[]);
+  });
 
   const getData = async () => {
     const shorten = await getShortenLink();
