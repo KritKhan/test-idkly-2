@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 
 const ShortenRedirect: React.FunctionComponent = () => {
   const { shorten } = useParams<{ shorten: string }>();
-  window.location.replace(`${process.env.REACT_APP_BASE_URL}${shorten}`);
+  console.log(`${process.env.REACT_APP_BASE_URL}${shorten}`)
+  window.location.assign(`${process.env.REACT_APP_BASE_URL}${shorten}`);
   return (
     <Jumbotron fluid style={{ background: "none" }}>
       <Row className="justify-content-md-center">
