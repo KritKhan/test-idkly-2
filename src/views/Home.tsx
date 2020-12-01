@@ -139,7 +139,7 @@ class Home extends React.Component {
                   <label htmlFor="basic-url">Customize your shorten link (5-12 characters)</label>
                   <InputGroup className="mb-3">
                     <InputGroup.Prepend>
-                      <InputGroup.Text>idk.ly/</InputGroup.Text>
+                      <InputGroup.Text>idkly.netlify.app/</InputGroup.Text>
                     </InputGroup.Prepend>
                     <FormControl
                       type="link_shorten"
