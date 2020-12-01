@@ -1,4 +1,3 @@
-
 import client from "./httpClient";
 
 interface props {
@@ -34,7 +33,10 @@ const shorten = async (url: props): Promise<string> => {
       throw Error(response.toString());
     })
     .catch((error) => {
-      if (error.response.status === 400 || error.response.status === 401) {
+      if (
+        error.response &&
+        (error.response.status === 400 || error.response.status === 401)
+      ) {
         return "incorrect";
       } else if (error.response) {
         return "";
