@@ -39,7 +39,7 @@ const shorten = async (url: props): Promise<string> => {
       ) {
         return "incorrect";
       } else if (error.response) {
-        return "";
+        return error.response.status;
       }
       throw error;
     });
