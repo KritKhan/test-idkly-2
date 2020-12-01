@@ -1,0 +1,16 @@
+@import "./main.scss";
+
+.home-container {
+  @extend .body;
+
+  .card-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    .main-card {
+      width: 750px;
+      padding: 20px;
+      background-color: white;
+    }
+  }
+}
