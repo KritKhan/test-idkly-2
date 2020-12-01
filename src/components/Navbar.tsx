@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 
 import { removeToken } from "helpers/Auth";
 import AuthContext from "./AuthContext";
+import logo from "assets/logo.png";
 
 const Navbar: React.FunctionComponent = () => {
   const history = useHistory();
@@ -36,7 +37,16 @@ const Navbar: React.FunctionComponent = () => {
       variant="dark"
       sticky="top"
     >
-      <BootstrapNavbar.Brand href="/">idk.ly</BootstrapNavbar.Brand>
+      <BootstrapNavbar.Brand href="/">
+        <img
+          alt="logo"
+          src={logo}
+          width="30"
+          height="30"
+          className="d-inline-block align-top"
+        />{" "}
+        idk.ly
+      </BootstrapNavbar.Brand>
       <BootstrapNavbar.Toggle aria-controls="responsive-navbar-nav" />
       <BootstrapNavbar.Collapse
         id="responsive-navbar-nav"
