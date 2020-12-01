@@ -9,7 +9,7 @@ interface props {
 const signUp = async (signupData: props) : Promise<boolean> => {
   const body = signupData;
   return await client
-  .post("api/signup", body)
+  .post("api/signup/", body)
   .then((response) => {
     console.log(response);
     if (response.status === 200) {
