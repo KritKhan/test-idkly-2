@@ -1,5 +1,0 @@
-https://idkly.netlify.app/ https://idkly.netlify.app/ 200
-https://idkly.netlify.app/signup https://idkly.netlify.app/signup 200
-https://idkly.netlify.app/signin https://idkly.netlify.app/signin 200
-https://idkly.netlify.app/dashboard https://idkly.netlify.app/dashboard 200
-https://idkly.netlify.app/* https://52.221.204.249/:splat 301!
