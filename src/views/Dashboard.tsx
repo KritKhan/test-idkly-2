@@ -35,15 +35,15 @@ function Dashboard() {
   const [accessLogs, setAccessLogs] = useState<Record<string, LogData>>({});
   const [selectedLink, setSelectedLink] = useState<number>(0);
 
-  const getInitialData = async () => {
+  const getInitialData = useCallback(async () => {
     setIsLoading(true);
     await Promise.all([getData(), getLogs()]);
     setIsLoading(false);
-  };
+  }, []);
 
   useEffect(() => {
     getInitialData();
-  });
+  }, [getInitialData]);
 
   const getData = async () => {
     const shorten = await getShortenLink();
@@ -173,11 +173,11 @@ function Dashboard() {
                     <Row className="shorten-link">
                       <a
                         href={
-                          process.env.REACT_APP_FRONTEND_URL + 
+                          process.env.REACT_APP_FRONTEND_URL +
                           shortenDatas[selectedLink].link_shorten
                         }
                       >
-                        {process.env.REACT_APP_FRONTEND_URL }
+                        {process.env.REACT_APP_FRONTEND_URL}
                         <b>{shortenDatas[selectedLink].link_shorten}</b>
                       </a>
                     </Row>
