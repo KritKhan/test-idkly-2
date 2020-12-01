@@ -92,7 +92,7 @@ class Home extends React.Component {
           // console.log("Shorten success!!!");
           this.setState({ isShorten: true, warning: "" });
           this.setState({
-            link_shorten: process.env.REACT_APP_FRONTEND_URL + ":" + process.env.PORT + "/"  + result,
+            link_shorten: process.env.REACT_APP_FRONTEND_URL + result,
           });
         }
       } catch (error) {

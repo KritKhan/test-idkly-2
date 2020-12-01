@@ -101,7 +101,7 @@ function Dashboard() {
         {
           label:
             "Link access for " +
-              process.env.REACT_APP_FRONTEND_URL + ":" + process.env.PORT + "/" +
+              process.env.REACT_APP_FRONTEND_URL +
               selectedShorten || "",
           data: logsFromState.access,
           fill: false,
@@ -151,7 +151,7 @@ function Dashboard() {
                           <b>{item.link_original}</b>
                         </Row>
                         <Row className="shorten">
-                          {process.env.REACT_APP_FRONTEND_URL + ":" + process.env.PORT + "/"}
+                          {process.env.REACT_APP_FRONTEND_URL}
                           <b>{item.link_shorten}</b>
                         </Row>
                       </ListGroup.Item>
@@ -173,11 +173,11 @@ function Dashboard() {
                     <Row className="shorten-link">
                       <a
                         href={
-                          process.env.REACT_APP_FRONTEND_URL + ":" + process.env.PORT + "/"  + 
+                          process.env.REACT_APP_FRONTEND_URL + 
                           shortenDatas[selectedLink].link_shorten
                         }
                       >
-                        {process.env.REACT_APP_FRONTEND_URL + ":" + process.env.PORT + "/" }
+                        {process.env.REACT_APP_FRONTEND_URL }
                         <b>{shortenDatas[selectedLink].link_shorten}</b>
                       </a>
                     </Row>
